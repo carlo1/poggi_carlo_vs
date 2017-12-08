@@ -1,1 +1,0 @@
-# poggi_carlo_vs
