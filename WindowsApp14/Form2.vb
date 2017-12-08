@@ -103,4 +103,12 @@
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles num5.Click
 
     End Sub
+
+    Private Sub num4_Click(sender As Object, e As EventArgs) Handles num4.Click
+        If Len(cod_autista.Text) < 3 Then
+            cod_autista.Text = Module1.codice_autista + "4"
+
+        End If
+        Module1.codice_autista = cod_autista.Text
+    End Sub
 End Class
