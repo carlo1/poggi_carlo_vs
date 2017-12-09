@@ -247,12 +247,13 @@ Partial Class Form1
         '
         'Button2
         '
+        Me.Button2.BackColor = System.Drawing.Color.Lime
         Me.Button2.Location = New System.Drawing.Point(172, 90)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(102, 56)
+        Me.Button2.Size = New System.Drawing.Size(226, 56)
         Me.Button2.TabIndex = 8
         Me.Button2.Text = "test"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Form1
         '
