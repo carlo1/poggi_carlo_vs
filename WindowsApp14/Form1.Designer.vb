@@ -50,6 +50,7 @@ Partial Class Form1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BollaTableAdapter = New WindowsApp14.DatabaseRel2DataSetTableAdapters.bollaTableAdapter()
         Me.Bolla_QueryTableAdapter = New WindowsApp14.DatabaseRel2DataSetTableAdapters.bolla_QueryTableAdapter()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BollaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatabaseRel2DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -193,7 +194,7 @@ Partial Class Form1
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(145, 225)
+        Me.Button3.Location = New System.Drawing.Point(112, 194)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(336, 102)
         Me.Button3.TabIndex = 5
@@ -244,12 +245,22 @@ Partial Class Form1
         '
         Me.Bolla_QueryTableAdapter.ClearBeforeFill = True
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(172, 90)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(102, 56)
+        Me.Button2.TabIndex = 8
+        Me.Button2.Text = "test"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1596, 861)
+        Me.ClientSize = New System.Drawing.Size(1588, 861)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.numerobolla)
         Me.Controls.Add(Me.annobolla)
@@ -302,4 +313,5 @@ Partial Class Form1
     Friend WithEvents CognomeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PesolordoDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents NettoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Button2 As Button
 End Class
