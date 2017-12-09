@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form esegue l'override del metodo Dispose per pulire l'elenco dei componenti.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTA: la procedura che segue è richiesta da Progettazione Windows Form
     'Può essere modificata in Progettazione Windows Form.  
     'Non modificarla mediante l'editor del codice.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -50,7 +50,6 @@ Partial Class Form1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BollaTableAdapter = New WindowsApp14.DatabaseRel2DataSetTableAdapters.bollaTableAdapter()
         Me.Bolla_QueryTableAdapter = New WindowsApp14.DatabaseRel2DataSetTableAdapters.bolla_QueryTableAdapter()
-        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BollaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatabaseRel2DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -245,23 +244,12 @@ Partial Class Form1
         '
         Me.Bolla_QueryTableAdapter.ClearBeforeFill = True
         '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.Lime
-        Me.Button2.Location = New System.Drawing.Point(172, 90)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(226, 56)
-        Me.Button2.TabIndex = 8
-        Me.Button2.Text = "test"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1588, 861)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.numerobolla)
         Me.Controls.Add(Me.annobolla)
@@ -314,5 +302,4 @@ Partial Class Form1
     Friend WithEvents CognomeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PesolordoDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents NettoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Button2 As Button
 End Class

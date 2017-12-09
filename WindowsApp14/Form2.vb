@@ -7,6 +7,7 @@
         annobolla.Text = Module1.annobolla
         numerobolla.Text = Module1.Numerobolla
 
+        cognome.Text = ""
         Module1.bolla_codice_autista = ""
 
 
@@ -76,6 +77,8 @@
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         cod_autista.Text = ""
         Module1.codice_autista = cod_autista.Text
+        cognome.Text = ""
+
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click

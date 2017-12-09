@@ -129,14 +129,13 @@ Partial Class Form2
         Me.cod_autista.Name = "cod_autista"
         Me.cod_autista.Size = New System.Drawing.Size(258, 65)
         Me.cod_autista.TabIndex = 14
-        Me.cod_autista.Text = "0"
         Me.cod_autista.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'num1
         '
         Me.num1.Font = New System.Drawing.Font("Tahoma", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.num1.ForeColor = System.Drawing.Color.Gray
-        Me.num1.Location = New System.Drawing.Point(482, 222)
+        Me.num1.Location = New System.Drawing.Point(527, 222)
         Me.num1.Name = "num1"
         Me.num1.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.num1.Size = New System.Drawing.Size(105, 98)
@@ -362,7 +361,7 @@ Partial Class Form2
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1596, 873)
+        Me.ClientSize = New System.Drawing.Size(1588, 865)
         Me.Controls.Add(Me.num9)
         Me.Controls.Add(Me.num8)
         Me.Controls.Add(Me.num7)
