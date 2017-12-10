@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form3
     Inherits System.Windows.Forms.Form
 
     'Form esegue l'override del metodo Dispose per pulire l'elenco dei componenti.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,12 @@ Partial Class Form3
     'NOTA: la procedura che segue è richiesta da Progettazione Windows Form
     'Può essere modificata in Progettazione Windows Form.  
     'Non modificarla mediante l'editor del codice.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Me.bolla_QueryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseRel2DataSet = New WindowsApp14.DatabaseRel2DataSet()
         Me.numerobolla = New System.Windows.Forms.Label()
         Me.annobolla = New System.Windows.Forms.Label()
         Me.data = New System.Windows.Forms.Label()
@@ -30,8 +34,25 @@ Partial Class Form3
         Me.Button1 = New System.Windows.Forms.Button()
         Me.elenco_cod_autista = New System.Windows.Forms.Label()
         Me.elenco_cognome = New System.Windows.Forms.Label()
+        Me.bollaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.bollaTableAdapter = New WindowsApp14.DatabaseRel2DataSetTableAdapters.bollaTableAdapter()
+        Me.bolla_QueryTableAdapter = New WindowsApp14.DatabaseRel2DataSetTableAdapters.bolla_QueryTableAdapter()
+        Me.ReportViewer2 = New Microsoft.Reporting.WinForms.ReportViewer()
+        CType(Me.bolla_QueryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseRel2DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bollaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'bolla_QueryBindingSource
+        '
+        Me.bolla_QueryBindingSource.DataMember = "bolla Query"
+        Me.bolla_QueryBindingSource.DataSource = Me.DatabaseRel2DataSet
+        '
+        'DatabaseRel2DataSet
+        '
+        Me.DatabaseRel2DataSet.DataSetName = "DatabaseRel2DataSet"
+        Me.DatabaseRel2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'numerobolla
         '
@@ -105,12 +126,37 @@ Partial Class Form3
         Me.elenco_cognome.TabIndex = 17
         Me.elenco_cognome.Text = "cognome"
         '
+        'bollaBindingSource
+        '
+        Me.bollaBindingSource.DataMember = "bolla"
+        Me.bollaBindingSource.DataSource = Me.DatabaseRel2DataSet
+        '
+        'bollaTableAdapter
+        '
+        Me.bollaTableAdapter.ClearBeforeFill = True
+        '
+        'bolla_QueryTableAdapter
+        '
+        Me.bolla_QueryTableAdapter.ClearBeforeFill = True
+        '
+        'ReportViewer2
+        '
+        ReportDataSource1.Name = "DataSet1"
+        ReportDataSource1.Value = Me.bolla_QueryBindingSource
+        Me.ReportViewer2.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer2.LocalReport.ReportEmbeddedResource = "WindowsApp14.Report2.rdlc"
+        Me.ReportViewer2.Location = New System.Drawing.Point(162, 26)
+        Me.ReportViewer2.Name = "ReportViewer2"
+        Me.ReportViewer2.Size = New System.Drawing.Size(582, 269)
+        Me.ReportViewer2.TabIndex = 19
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1596, 861)
+        Me.Controls.Add(Me.ReportViewer2)
         Me.Controls.Add(Me.elenco_cognome)
         Me.Controls.Add(Me.elenco_cod_autista)
         Me.Controls.Add(Me.Button2)
@@ -122,7 +168,10 @@ Partial Class Form3
         Me.Name = "Form3"
         Me.Text = "Form3"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        CType(Me.bolla_QueryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseRel2DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bollaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -136,4 +185,10 @@ Partial Class Form3
     Friend WithEvents Button1 As Button
     Friend WithEvents elenco_cod_autista As Label
     Friend WithEvents elenco_cognome As Label
+    Friend WithEvents bollaBindingSource As BindingSource
+    Friend WithEvents DatabaseRel2DataSet As DatabaseRel2DataSet
+    Friend WithEvents bollaTableAdapter As DatabaseRel2DataSetTableAdapters.bollaTableAdapter
+    Friend WithEvents bolla_QueryBindingSource As BindingSource
+    Friend WithEvents bolla_QueryTableAdapter As DatabaseRel2DataSetTableAdapters.bolla_QueryTableAdapter
+    Friend WithEvents ReportViewer2 As Microsoft.Reporting.WinForms.ReportViewer
 End Class

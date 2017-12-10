@@ -1,0 +1,4 @@
+C1.Win.C1ReportDesigner.C1ReportDesigner, C1.Win.C1ReportDesigner.2, Version=2.0.20151.38, Culture=neutral, PublicKeyToken=fb528571dbff5bd2
+C1.C1Report.C1Report, C1.C1Report.4, Version=4.0.20151.38, Culture=neutral, PublicKeyToken=594a0605db190bb9
+C1.C1Preview.C1PrintDocument, C1.C1Report.4, Version=4.0.20151.38, Culture=neutral, PublicKeyToken=594a0605db190bb9
+C1.C1Rdl.Rdl2008.C1RdlReport, C1.C1Report.4, Version=4.0.20151.38, Culture=neutral, PublicKeyToken=594a0605db190bb9
