@@ -39,8 +39,9 @@
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT a_ID_autista, a_spring, a_nome, a_cognome, a_note FROM a_tab_autista</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT a_ID_autista, a_spring, a_nome, a_cognome, a_note FROM a_tab_autista
+ORDER BY a_ID_autista</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -74,7 +75,16 @@
               <Mapping SourceColumn="a_cognome" DataSetColumn="a_cognome" />
               <Mapping SourceColumn="a_note" DataSetColumn="a_note" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="Db_allara_bollaConnectionString1 (MySettings)" DbObjectName="a_tab_autista" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT a_ID_autista, a_cognome, a_nome, a_note, a_spring FROM a_tab_autista ORDER BY a_ID_autista</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="b_tab_mezzoTableAdapter" GeneratorDataComponentClassName="b_tab_mezzoTableAdapter" Name="b_tab_mezzo" UserDataComponentName="b_tab_mezzoTableAdapter">
             <MainSource>
@@ -141,8 +151,10 @@
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT b_ID_mezzo, b_spring, b_ragione, b_indirizzo, b_comune, b_piva, b_albo, b_tel, b_targa, b_vettore, b_tara, b_provincia, b_cod_vettore, b_note, b_lordo_teorico, b_autorizzato FROM b_tab_mezzo</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        b_ID_mezzo, b_spring, b_ragione, b_indirizzo, b_comune, b_piva, b_albo, b_tel, b_targa, b_vettore, b_tara, b_provincia, b_cod_vettore, b_note, b_lordo_teorico, b_autorizzato
+FROM            b_tab_mezzo
+ORDER BY b_ID_mezzo</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -646,8 +658,10 @@
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID_numero_bolla, anno, data, ora, a_cod, b_cod, c_cod, d_cod, e_cod, f_cod, peso_lordo FROM tab_bolla</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ID_numero_bolla, anno, data, ora, a_cod, b_cod, c_cod, d_cod, e_cod, f_cod, peso_lordo
+FROM            tab_bolla
+ORDER BY ID_numero_bolla DESC</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -709,10 +723,12 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tab_bolla_QueryTableAdapter" GeneratorDataComponentClassName="tab_bolla_QueryTableAdapter" Name="tab_bolla_Query" UserDataComponentName="tab_bolla_QueryTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Db_allara_bollaConnectionString1 (MySettings)" DbObjectName="tab_bolla_Query" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Db_allara_bollaConnectionString1 (MySettings)" DbObjectName="tab_bolla_Query" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID_numero_bolla, anno, data, ora, a_nome, a_cognome, b_targa, b_tara, b_ragione, c_ragione, d_descrizione, e_sito, e_localita, f_nome, peso_lordo, netto FROM tab_bolla_Query</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ID_numero_bolla, anno, data, ora, a_nome, a_cognome, b_targa, b_tara, b_ragione, c_ragione, d_descrizione, e_sito, e_localita, f_nome, peso_lordo, netto
+FROM            tab_bolla_Query
+ORDER BY ID_numero_bolla DESC</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -746,7 +762,7 @@
   <xs:element name="Db_allara_bollaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Db_allara_bollaDataSet" msprop:Generator_UserDSName="Db_allara_bollaDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="a_tab_autista" msprop:Generator_TableClassName="a_tab_autistaDataTable" msprop:Generator_TableVarName="tablea_tab_autista" msprop:Generator_TablePropName="a_tab_autista" msprop:Generator_RowDeletingName="a_tab_autistaRowDeleting" msprop:Generator_RowChangingName="a_tab_autistaRowChanging" msprop:Generator_RowEvHandlerName="a_tab_autistaRowChangeEventHandler" msprop:Generator_RowDeletedName="a_tab_autistaRowDeleted" msprop:Generator_UserTableName="a_tab_autista" msprop:Generator_RowChangedName="a_tab_autistaRowChanged" msprop:Generator_RowEvArgName="a_tab_autistaRowChangeEvent" msprop:Generator_RowClassName="a_tab_autistaRow">
+        <xs:element name="a_tab_autista" msprop:Generator_TableClassName="a_tab_autistaDataTable" msprop:Generator_TableVarName="tablea_tab_autista" msprop:Generator_RowChangedName="a_tab_autistaRowChanged" msprop:Generator_TablePropName="a_tab_autista" msprop:Generator_RowDeletingName="a_tab_autistaRowDeleting" msprop:Generator_RowChangingName="a_tab_autistaRowChanging" msprop:Generator_RowEvHandlerName="a_tab_autistaRowChangeEventHandler" msprop:Generator_RowDeletedName="a_tab_autistaRowDeleted" msprop:Generator_RowClassName="a_tab_autistaRow" msprop:Generator_UserTableName="a_tab_autista" msprop:Generator_RowEvArgName="a_tab_autistaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="a_ID_autista" msprop:Generator_ColumnVarNameInTable="columna_ID_autista" msprop:Generator_ColumnPropNameInRow="a_ID_autista" msprop:Generator_ColumnPropNameInTable="a_ID_autistaColumn" msprop:Generator_UserColumnName="a_ID_autista" type="xs:int" />
@@ -775,7 +791,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="b_tab_mezzo" msprop:Generator_TableClassName="b_tab_mezzoDataTable" msprop:Generator_TableVarName="tableb_tab_mezzo" msprop:Generator_TablePropName="b_tab_mezzo" msprop:Generator_RowDeletingName="b_tab_mezzoRowDeleting" msprop:Generator_RowChangingName="b_tab_mezzoRowChanging" msprop:Generator_RowEvHandlerName="b_tab_mezzoRowChangeEventHandler" msprop:Generator_RowDeletedName="b_tab_mezzoRowDeleted" msprop:Generator_UserTableName="b_tab_mezzo" msprop:Generator_RowChangedName="b_tab_mezzoRowChanged" msprop:Generator_RowEvArgName="b_tab_mezzoRowChangeEvent" msprop:Generator_RowClassName="b_tab_mezzoRow">
+        <xs:element name="b_tab_mezzo" msprop:Generator_TableClassName="b_tab_mezzoDataTable" msprop:Generator_TableVarName="tableb_tab_mezzo" msprop:Generator_RowChangedName="b_tab_mezzoRowChanged" msprop:Generator_TablePropName="b_tab_mezzo" msprop:Generator_RowDeletingName="b_tab_mezzoRowDeleting" msprop:Generator_RowChangingName="b_tab_mezzoRowChanging" msprop:Generator_RowEvHandlerName="b_tab_mezzoRowChangeEventHandler" msprop:Generator_RowDeletedName="b_tab_mezzoRowDeleted" msprop:Generator_RowClassName="b_tab_mezzoRow" msprop:Generator_UserTableName="b_tab_mezzo" msprop:Generator_RowEvArgName="b_tab_mezzoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="b_ID_mezzo" msprop:Generator_ColumnVarNameInTable="columnb_ID_mezzo" msprop:Generator_ColumnPropNameInRow="b_ID_mezzo" msprop:Generator_ColumnPropNameInTable="b_ID_mezzoColumn" msprop:Generator_UserColumnName="b_ID_mezzo" type="xs:int" />
@@ -857,7 +873,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="c_tab_cliente" msprop:Generator_TableClassName="c_tab_clienteDataTable" msprop:Generator_TableVarName="tablec_tab_cliente" msprop:Generator_TablePropName="c_tab_cliente" msprop:Generator_RowDeletingName="c_tab_clienteRowDeleting" msprop:Generator_RowChangingName="c_tab_clienteRowChanging" msprop:Generator_RowEvHandlerName="c_tab_clienteRowChangeEventHandler" msprop:Generator_RowDeletedName="c_tab_clienteRowDeleted" msprop:Generator_UserTableName="c_tab_cliente" msprop:Generator_RowChangedName="c_tab_clienteRowChanged" msprop:Generator_RowEvArgName="c_tab_clienteRowChangeEvent" msprop:Generator_RowClassName="c_tab_clienteRow">
+        <xs:element name="c_tab_cliente" msprop:Generator_TableClassName="c_tab_clienteDataTable" msprop:Generator_TableVarName="tablec_tab_cliente" msprop:Generator_RowChangedName="c_tab_clienteRowChanged" msprop:Generator_TablePropName="c_tab_cliente" msprop:Generator_RowDeletingName="c_tab_clienteRowDeleting" msprop:Generator_RowChangingName="c_tab_clienteRowChanging" msprop:Generator_RowEvHandlerName="c_tab_clienteRowChangeEventHandler" msprop:Generator_RowDeletedName="c_tab_clienteRowDeleted" msprop:Generator_RowClassName="c_tab_clienteRow" msprop:Generator_UserTableName="c_tab_cliente" msprop:Generator_RowEvArgName="c_tab_clienteRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="c_ID_cliente" msprop:Generator_ColumnVarNameInTable="columnc_ID_cliente" msprop:Generator_ColumnPropNameInRow="c_ID_cliente" msprop:Generator_ColumnPropNameInTable="c_ID_clienteColumn" msprop:Generator_UserColumnName="c_ID_cliente" type="xs:int" />
@@ -935,7 +951,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="d_tab_materiali" msprop:Generator_TableClassName="d_tab_materialiDataTable" msprop:Generator_TableVarName="tabled_tab_materiali" msprop:Generator_TablePropName="d_tab_materiali" msprop:Generator_RowDeletingName="d_tab_materialiRowDeleting" msprop:Generator_RowChangingName="d_tab_materialiRowChanging" msprop:Generator_RowEvHandlerName="d_tab_materialiRowChangeEventHandler" msprop:Generator_RowDeletedName="d_tab_materialiRowDeleted" msprop:Generator_UserTableName="d_tab_materiali" msprop:Generator_RowChangedName="d_tab_materialiRowChanged" msprop:Generator_RowEvArgName="d_tab_materialiRowChangeEvent" msprop:Generator_RowClassName="d_tab_materialiRow">
+        <xs:element name="d_tab_materiali" msprop:Generator_TableClassName="d_tab_materialiDataTable" msprop:Generator_TableVarName="tabled_tab_materiali" msprop:Generator_RowChangedName="d_tab_materialiRowChanged" msprop:Generator_TablePropName="d_tab_materiali" msprop:Generator_RowDeletingName="d_tab_materialiRowDeleting" msprop:Generator_RowChangingName="d_tab_materialiRowChanging" msprop:Generator_RowEvHandlerName="d_tab_materialiRowChangeEventHandler" msprop:Generator_RowDeletedName="d_tab_materialiRowDeleted" msprop:Generator_RowClassName="d_tab_materialiRow" msprop:Generator_UserTableName="d_tab_materiali" msprop:Generator_RowEvArgName="d_tab_materialiRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="d_ID_materiali" msprop:Generator_ColumnVarNameInTable="columnd_ID_materiali" msprop:Generator_ColumnPropNameInRow="d_ID_materiali" msprop:Generator_ColumnPropNameInTable="d_ID_materialiColumn" msprop:Generator_UserColumnName="d_ID_materiali" type="xs:int" />
@@ -971,7 +987,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="e_tab_destinazione" msprop:Generator_TableClassName="e_tab_destinazioneDataTable" msprop:Generator_TableVarName="tablee_tab_destinazione" msprop:Generator_TablePropName="e_tab_destinazione" msprop:Generator_RowDeletingName="e_tab_destinazioneRowDeleting" msprop:Generator_RowChangingName="e_tab_destinazioneRowChanging" msprop:Generator_RowEvHandlerName="e_tab_destinazioneRowChangeEventHandler" msprop:Generator_RowDeletedName="e_tab_destinazioneRowDeleted" msprop:Generator_UserTableName="e_tab_destinazione" msprop:Generator_RowChangedName="e_tab_destinazioneRowChanged" msprop:Generator_RowEvArgName="e_tab_destinazioneRowChangeEvent" msprop:Generator_RowClassName="e_tab_destinazioneRow">
+        <xs:element name="e_tab_destinazione" msprop:Generator_TableClassName="e_tab_destinazioneDataTable" msprop:Generator_TableVarName="tablee_tab_destinazione" msprop:Generator_RowChangedName="e_tab_destinazioneRowChanged" msprop:Generator_TablePropName="e_tab_destinazione" msprop:Generator_RowDeletingName="e_tab_destinazioneRowDeleting" msprop:Generator_RowChangingName="e_tab_destinazioneRowChanging" msprop:Generator_RowEvHandlerName="e_tab_destinazioneRowChangeEventHandler" msprop:Generator_RowDeletedName="e_tab_destinazioneRowDeleted" msprop:Generator_RowClassName="e_tab_destinazioneRow" msprop:Generator_UserTableName="e_tab_destinazione" msprop:Generator_RowEvArgName="e_tab_destinazioneRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="e_ID_destinazione" msprop:Generator_ColumnVarNameInTable="columne_ID_destinazione" msprop:Generator_ColumnPropNameInRow="e_ID_destinazione" msprop:Generator_ColumnPropNameInTable="e_ID_destinazioneColumn" msprop:Generator_UserColumnName="e_ID_destinazione" type="xs:int" />
@@ -1021,7 +1037,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="f_tab_gestore" msprop:Generator_TableClassName="f_tab_gestoreDataTable" msprop:Generator_TableVarName="tablef_tab_gestore" msprop:Generator_TablePropName="f_tab_gestore" msprop:Generator_RowDeletingName="f_tab_gestoreRowDeleting" msprop:Generator_RowChangingName="f_tab_gestoreRowChanging" msprop:Generator_RowEvHandlerName="f_tab_gestoreRowChangeEventHandler" msprop:Generator_RowDeletedName="f_tab_gestoreRowDeleted" msprop:Generator_UserTableName="f_tab_gestore" msprop:Generator_RowChangedName="f_tab_gestoreRowChanged" msprop:Generator_RowEvArgName="f_tab_gestoreRowChangeEvent" msprop:Generator_RowClassName="f_tab_gestoreRow">
+        <xs:element name="f_tab_gestore" msprop:Generator_TableClassName="f_tab_gestoreDataTable" msprop:Generator_TableVarName="tablef_tab_gestore" msprop:Generator_RowChangedName="f_tab_gestoreRowChanged" msprop:Generator_TablePropName="f_tab_gestore" msprop:Generator_RowDeletingName="f_tab_gestoreRowDeleting" msprop:Generator_RowChangingName="f_tab_gestoreRowChanging" msprop:Generator_RowEvHandlerName="f_tab_gestoreRowChangeEventHandler" msprop:Generator_RowDeletedName="f_tab_gestoreRowDeleted" msprop:Generator_RowClassName="f_tab_gestoreRow" msprop:Generator_UserTableName="f_tab_gestore" msprop:Generator_RowEvArgName="f_tab_gestoreRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="f_ID_gestore" msprop:Generator_ColumnVarNameInTable="columnf_ID_gestore" msprop:Generator_ColumnPropNameInRow="f_ID_gestore" msprop:Generator_ColumnPropNameInTable="f_ID_gestoreColumn" msprop:Generator_UserColumnName="f_ID_gestore" type="xs:int" />
@@ -1077,7 +1093,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tab_bolla" msprop:Generator_TableClassName="tab_bollaDataTable" msprop:Generator_TableVarName="tabletab_bolla" msprop:Generator_TablePropName="tab_bolla" msprop:Generator_RowDeletingName="tab_bollaRowDeleting" msprop:Generator_RowChangingName="tab_bollaRowChanging" msprop:Generator_RowEvHandlerName="tab_bollaRowChangeEventHandler" msprop:Generator_RowDeletedName="tab_bollaRowDeleted" msprop:Generator_UserTableName="tab_bolla" msprop:Generator_RowChangedName="tab_bollaRowChanged" msprop:Generator_RowEvArgName="tab_bollaRowChangeEvent" msprop:Generator_RowClassName="tab_bollaRow">
+        <xs:element name="tab_bolla" msprop:Generator_TableClassName="tab_bollaDataTable" msprop:Generator_TableVarName="tabletab_bolla" msprop:Generator_RowChangedName="tab_bollaRowChanged" msprop:Generator_TablePropName="tab_bolla" msprop:Generator_RowDeletingName="tab_bollaRowDeleting" msprop:Generator_RowChangingName="tab_bollaRowChanging" msprop:Generator_RowEvHandlerName="tab_bollaRowChangeEventHandler" msprop:Generator_RowDeletedName="tab_bollaRowDeleted" msprop:Generator_RowClassName="tab_bollaRow" msprop:Generator_UserTableName="tab_bolla" msprop:Generator_RowEvArgName="tab_bollaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_numero_bolla" msprop:Generator_ColumnVarNameInTable="columnID_numero_bolla" msprop:Generator_ColumnPropNameInRow="ID_numero_bolla" msprop:Generator_ColumnPropNameInTable="ID_numero_bollaColumn" msprop:Generator_UserColumnName="ID_numero_bolla" type="xs:int" />
@@ -1100,7 +1116,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tab_bolla_Query" msprop:Generator_TableClassName="tab_bolla_QueryDataTable" msprop:Generator_TableVarName="tabletab_bolla_Query" msprop:Generator_TablePropName="tab_bolla_Query" msprop:Generator_RowDeletingName="tab_bolla_QueryRowDeleting" msprop:Generator_RowChangingName="tab_bolla_QueryRowChanging" msprop:Generator_RowEvHandlerName="tab_bolla_QueryRowChangeEventHandler" msprop:Generator_RowDeletedName="tab_bolla_QueryRowDeleted" msprop:Generator_UserTableName="tab_bolla_Query" msprop:Generator_RowChangedName="tab_bolla_QueryRowChanged" msprop:Generator_RowEvArgName="tab_bolla_QueryRowChangeEvent" msprop:Generator_RowClassName="tab_bolla_QueryRow">
+        <xs:element name="tab_bolla_Query" msprop:Generator_TableClassName="tab_bolla_QueryDataTable" msprop:Generator_TableVarName="tabletab_bolla_Query" msprop:Generator_RowChangedName="tab_bolla_QueryRowChanged" msprop:Generator_TablePropName="tab_bolla_Query" msprop:Generator_RowDeletingName="tab_bolla_QueryRowDeleting" msprop:Generator_RowChangingName="tab_bolla_QueryRowChanging" msprop:Generator_RowEvHandlerName="tab_bolla_QueryRowChangeEventHandler" msprop:Generator_RowDeletedName="tab_bolla_QueryRowDeleted" msprop:Generator_RowClassName="tab_bolla_QueryRow" msprop:Generator_UserTableName="tab_bolla_Query" msprop:Generator_RowEvArgName="tab_bolla_QueryRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_numero_bolla" msprop:Generator_ColumnVarNameInTable="columnID_numero_bolla" msprop:Generator_ColumnPropNameInRow="ID_numero_bolla" msprop:Generator_ColumnPropNameInTable="ID_numero_bollaColumn" msprop:Generator_UserColumnName="ID_numero_bolla" type="xs:int" minOccurs="0" />
@@ -1215,12 +1231,12 @@
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="a_tab_autistatab_bolla" msdata:parent="a_tab_autista" msdata:child="tab_bolla" msdata:parentkey="a_ID_autista" msdata:childkey="a_cod" msprop:Generator_UserChildTable="tab_bolla" msprop:Generator_ChildPropName="Gettab_bollaRows" msprop:Generator_UserRelationName="a_tab_autistatab_bolla" msprop:Generator_ParentPropName="a_tab_autistaRow" msprop:Generator_RelationVarName="relationa_tab_autistatab_bolla" msprop:Generator_UserParentTable="a_tab_autista" />
-      <msdata:Relationship name="b_tab_mezzotab_bolla" msdata:parent="b_tab_mezzo" msdata:child="tab_bolla" msdata:parentkey="b_ID_mezzo" msdata:childkey="b_cod" msprop:Generator_UserChildTable="tab_bolla" msprop:Generator_ChildPropName="Gettab_bollaRows" msprop:Generator_UserRelationName="b_tab_mezzotab_bolla" msprop:Generator_ParentPropName="b_tab_mezzoRow" msprop:Generator_RelationVarName="relationb_tab_mezzotab_bolla" msprop:Generator_UserParentTable="b_tab_mezzo" />
-      <msdata:Relationship name="c_tab_clientetab_bolla" msdata:parent="c_tab_cliente" msdata:child="tab_bolla" msdata:parentkey="c_ID_cliente" msdata:childkey="c_cod" msprop:Generator_UserChildTable="tab_bolla" msprop:Generator_ChildPropName="Gettab_bollaRows" msprop:Generator_UserRelationName="c_tab_clientetab_bolla" msprop:Generator_ParentPropName="c_tab_clienteRow" msprop:Generator_RelationVarName="relationc_tab_clientetab_bolla" msprop:Generator_UserParentTable="c_tab_cliente" />
-      <msdata:Relationship name="d_tab_materialitab_bolla" msdata:parent="d_tab_materiali" msdata:child="tab_bolla" msdata:parentkey="d_ID_materiali" msdata:childkey="d_cod" msprop:Generator_UserChildTable="tab_bolla" msprop:Generator_ChildPropName="Gettab_bollaRows" msprop:Generator_UserRelationName="d_tab_materialitab_bolla" msprop:Generator_ParentPropName="d_tab_materialiRow" msprop:Generator_RelationVarName="relationd_tab_materialitab_bolla" msprop:Generator_UserParentTable="d_tab_materiali" />
-      <msdata:Relationship name="e_tab_destinazionetab_bolla" msdata:parent="e_tab_destinazione" msdata:child="tab_bolla" msdata:parentkey="e_ID_destinazione" msdata:childkey="e_cod" msprop:Generator_UserChildTable="tab_bolla" msprop:Generator_ChildPropName="Gettab_bollaRows" msprop:Generator_UserRelationName="e_tab_destinazionetab_bolla" msprop:Generator_ParentPropName="e_tab_destinazioneRow" msprop:Generator_RelationVarName="relatione_tab_destinazionetab_bolla" msprop:Generator_UserParentTable="e_tab_destinazione" />
-      <msdata:Relationship name="f_tab_gestoretab_bolla" msdata:parent="f_tab_gestore" msdata:child="tab_bolla" msdata:parentkey="f_ID_gestore" msdata:childkey="f_cod" msprop:Generator_UserChildTable="tab_bolla" msprop:Generator_ChildPropName="Gettab_bollaRows" msprop:Generator_UserRelationName="f_tab_gestoretab_bolla" msprop:Generator_ParentPropName="f_tab_gestoreRow" msprop:Generator_RelationVarName="relationf_tab_gestoretab_bolla" msprop:Generator_UserParentTable="f_tab_gestore" />
+      <msdata:Relationship name="a_tab_autistatab_bolla" msdata:parent="a_tab_autista" msdata:child="tab_bolla" msdata:parentkey="a_ID_autista" msdata:childkey="a_cod" msprop:Generator_UserChildTable="tab_bolla" msprop:Generator_ChildPropName="Gettab_bollaRows" msprop:Generator_UserRelationName="a_tab_autistatab_bolla" msprop:Generator_RelationVarName="relationa_tab_autistatab_bolla" msprop:Generator_UserParentTable="a_tab_autista" msprop:Generator_ParentPropName="a_tab_autistaRow" />
+      <msdata:Relationship name="b_tab_mezzotab_bolla" msdata:parent="b_tab_mezzo" msdata:child="tab_bolla" msdata:parentkey="b_ID_mezzo" msdata:childkey="b_cod" msprop:Generator_UserChildTable="tab_bolla" msprop:Generator_ChildPropName="Gettab_bollaRows" msprop:Generator_UserRelationName="b_tab_mezzotab_bolla" msprop:Generator_RelationVarName="relationb_tab_mezzotab_bolla" msprop:Generator_UserParentTable="b_tab_mezzo" msprop:Generator_ParentPropName="b_tab_mezzoRow" />
+      <msdata:Relationship name="c_tab_clientetab_bolla" msdata:parent="c_tab_cliente" msdata:child="tab_bolla" msdata:parentkey="c_ID_cliente" msdata:childkey="c_cod" msprop:Generator_UserChildTable="tab_bolla" msprop:Generator_ChildPropName="Gettab_bollaRows" msprop:Generator_UserRelationName="c_tab_clientetab_bolla" msprop:Generator_RelationVarName="relationc_tab_clientetab_bolla" msprop:Generator_UserParentTable="c_tab_cliente" msprop:Generator_ParentPropName="c_tab_clienteRow" />
+      <msdata:Relationship name="d_tab_materialitab_bolla" msdata:parent="d_tab_materiali" msdata:child="tab_bolla" msdata:parentkey="d_ID_materiali" msdata:childkey="d_cod" msprop:Generator_UserChildTable="tab_bolla" msprop:Generator_ChildPropName="Gettab_bollaRows" msprop:Generator_UserRelationName="d_tab_materialitab_bolla" msprop:Generator_RelationVarName="relationd_tab_materialitab_bolla" msprop:Generator_UserParentTable="d_tab_materiali" msprop:Generator_ParentPropName="d_tab_materialiRow" />
+      <msdata:Relationship name="e_tab_destinazionetab_bolla" msdata:parent="e_tab_destinazione" msdata:child="tab_bolla" msdata:parentkey="e_ID_destinazione" msdata:childkey="e_cod" msprop:Generator_UserChildTable="tab_bolla" msprop:Generator_ChildPropName="Gettab_bollaRows" msprop:Generator_UserRelationName="e_tab_destinazionetab_bolla" msprop:Generator_RelationVarName="relatione_tab_destinazionetab_bolla" msprop:Generator_UserParentTable="e_tab_destinazione" msprop:Generator_ParentPropName="e_tab_destinazioneRow" />
+      <msdata:Relationship name="f_tab_gestoretab_bolla" msdata:parent="f_tab_gestore" msdata:child="tab_bolla" msdata:parentkey="f_ID_gestore" msdata:childkey="f_cod" msprop:Generator_UserChildTable="tab_bolla" msprop:Generator_ChildPropName="Gettab_bollaRows" msprop:Generator_UserRelationName="f_tab_gestoretab_bolla" msprop:Generator_RelationVarName="relationf_tab_gestoretab_bolla" msprop:Generator_UserParentTable="f_tab_gestore" msprop:Generator_ParentPropName="f_tab_gestoreRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

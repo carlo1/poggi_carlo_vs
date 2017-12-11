@@ -6544,11 +6544,17 @@ Namespace Db_allara_bollaDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT a_ID_autista, a_spring, a_nome, a_cognome, a_note FROM a_tab_autista"
+            Me._commandCollection(0).CommandText = "SELECT a_ID_autista, a_spring, a_nome, a_cognome, a_note FROM a_tab_autista"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDE"& _ 
+                "R BY a_ID_autista"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT a_ID_autista, a_cognome, a_nome, a_note, a_spring FROM a_tab_autista ORDER"& _ 
+                " BY a_ID_autista"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6570,6 +6576,30 @@ Namespace Db_allara_bollaDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As Db_allara_bollaDataSet.a_tab_autistaDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As Db_allara_bollaDataSet.a_tab_autistaDataTable = New Db_allara_bollaDataSet.a_tab_autistaDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillBy(ByVal dataTable As Db_allara_bollaDataSet.a_tab_autistaDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy() As Db_allara_bollaDataSet.a_tab_autistaDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
             Dim dataTable As Db_allara_bollaDataSet.a_tab_autistaDataTable = New Db_allara_bollaDataSet.a_tab_autistaDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -7066,9 +7096,9 @@ Namespace Db_allara_bollaDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT b_ID_mezzo, b_spring, b_ragione, b_indirizzo, b_comune, b_piva, b_albo, b_"& _ 
-                "tel, b_targa, b_vettore, b_tara, b_provincia, b_cod_vettore, b_note, b_lordo_teo"& _ 
-                "rico, b_autorizzato FROM b_tab_mezzo"
+            Me._commandCollection(0).CommandText = "SELECT        b_ID_mezzo, b_spring, b_ragione, b_indirizzo, b_comune, b_piva, b_a"& _ 
+                "lbo, b_tel, b_targa, b_vettore, b_tara, b_provincia, b_cod_vettore, b_note, b_lo"& _ 
+                "rdo_teorico, b_autorizzato"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            b_tab_mezzo"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY b_ID_mezzo"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -10112,8 +10142,8 @@ Namespace Db_allara_bollaDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT ID_numero_bolla, anno, data, ora, a_cod, b_cod, c_cod, d_cod, e_cod, f_cod"& _ 
-                ", peso_lordo FROM tab_bolla"
+            Me._commandCollection(0).CommandText = "SELECT        ID_numero_bolla, anno, data, ora, a_cod, b_cod, c_cod, d_cod, e_cod"& _ 
+                ", f_cod, peso_lordo"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tab_bolla"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY ID_numero_bolla DESC"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -10684,9 +10714,9 @@ Namespace Db_allara_bollaDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT ID_numero_bolla, anno, data, ora, a_nome, a_cognome, b_targa, b_tara, b_ra"& _ 
-                "gione, c_ragione, d_descrizione, e_sito, e_localita, f_nome, peso_lordo, netto F"& _ 
-                "ROM tab_bolla_Query"
+            Me._commandCollection(0).CommandText = "SELECT        ID_numero_bolla, anno, data, ora, a_nome, a_cognome, b_targa, b_tar"& _ 
+                "a, b_ragione, c_ragione, d_descrizione, e_sito, e_localita, f_nome, peso_lordo, "& _ 
+                "netto"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tab_bolla_Query"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY ID_numero_bolla DESC"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
