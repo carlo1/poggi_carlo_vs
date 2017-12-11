@@ -25,9 +25,25 @@
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        AtabautistaBindingSource.EndEdit()
-        A_tab_autistaTableAdapter.Update(Db_allara_bollaDataSet.a_tab_autista)
-        Me.A_tab_autistaTableAdapter.Fill(Me.Db_allara_bollaDataSet.a_tab_autista)
+
+
+        Try
+            AtabautistaBindingSource.EndEdit()
+            A_tab_autistaTableAdapter.Update(Db_allara_bollaDataSet.a_tab_autista)
+            Me.A_tab_autistaTableAdapter.Fill(Me.Db_allara_bollaDataSet.a_tab_autista)
+
+
+        Catch ex As System.Data.ConstraintException
+            MsgBox(“IL CODICE AUTISTA E' GIA PRESENTE , INSERIRE UN CODICE DIVERSO !!! ”)
+
+            Me.A_tab_autistaTableAdapter.Fill(Me.Db_allara_bollaDataSet.a_tab_autista)
+        End Try
+
+
+
+
+
+
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
