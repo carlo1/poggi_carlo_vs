@@ -25,9 +25,6 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Db_allara_bollaDataSet = New bolla_touch_2.Db_allara_bollaDataSet()
-        Me.TabbollaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tab_bollaTableAdapter = New bolla_touch_2.Db_allara_bollaDataSetTableAdapters.tab_bollaTableAdapter()
         Me.IDnumerobollaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AnnoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -39,9 +36,10 @@ Partial Class Form1
         Me.EcodDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FcodDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PesolordoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TabbollaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Db_allara_bollaDataSet = New bolla_touch_2.Db_allara_bollaDataSet()
+        Me.Tab_bollaTableAdapter = New bolla_touch_2.Db_allara_bollaDataSetTableAdapters.tab_bollaTableAdapter()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.TabbollaQueryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tab_bolla_QueryTableAdapter = New bolla_touch_2.Db_allara_bollaDataSetTableAdapters.tab_bolla_QueryTableAdapter()
         Me.IDnumerobollaDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AnnoDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -58,10 +56,13 @@ Partial Class Form1
         Me.FnomeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PesolordoDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NettoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TabbollaQueryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tab_bolla_QueryTableAdapter = New bolla_touch_2.Db_allara_bollaDataSetTableAdapters.tab_bolla_QueryTableAdapter()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Db_allara_bollaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TabbollaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Db_allara_bollaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TabbollaQueryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -85,20 +86,6 @@ Partial Class Form1
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(1273, 156)
         Me.DataGridView1.TabIndex = 2
-        '
-        'Db_allara_bollaDataSet
-        '
-        Me.Db_allara_bollaDataSet.DataSetName = "Db_allara_bollaDataSet"
-        Me.Db_allara_bollaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TabbollaBindingSource
-        '
-        Me.TabbollaBindingSource.DataMember = "tab_bolla"
-        Me.TabbollaBindingSource.DataSource = Me.Db_allara_bollaDataSet
-        '
-        'Tab_bollaTableAdapter
-        '
-        Me.Tab_bollaTableAdapter.ClearBeforeFill = True
         '
         'IDnumerobollaDataGridViewTextBoxColumn
         '
@@ -166,6 +153,20 @@ Partial Class Form1
         Me.PesolordoDataGridViewTextBoxColumn.HeaderText = "peso_lordo"
         Me.PesolordoDataGridViewTextBoxColumn.Name = "PesolordoDataGridViewTextBoxColumn"
         '
+        'TabbollaBindingSource
+        '
+        Me.TabbollaBindingSource.DataMember = "tab_bolla"
+        Me.TabbollaBindingSource.DataSource = Me.Db_allara_bollaDataSet
+        '
+        'Db_allara_bollaDataSet
+        '
+        Me.Db_allara_bollaDataSet.DataSetName = "Db_allara_bollaDataSet"
+        Me.Db_allara_bollaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Tab_bollaTableAdapter
+        '
+        Me.Tab_bollaTableAdapter.ClearBeforeFill = True
+        '
         'DataGridView2
         '
         Me.DataGridView2.AutoGenerateColumns = False
@@ -176,15 +177,6 @@ Partial Class Form1
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.Size = New System.Drawing.Size(1705, 78)
         Me.DataGridView2.TabIndex = 3
-        '
-        'TabbollaQueryBindingSource
-        '
-        Me.TabbollaQueryBindingSource.DataMember = "tab_bolla_Query"
-        Me.TabbollaQueryBindingSource.DataSource = Me.Db_allara_bollaDataSet
-        '
-        'Tab_bolla_QueryTableAdapter
-        '
-        Me.Tab_bolla_QueryTableAdapter.ClearBeforeFill = True
         '
         'IDnumerobollaDataGridViewTextBoxColumn1
         '
@@ -282,6 +274,15 @@ Partial Class Form1
         Me.NettoDataGridViewTextBoxColumn.HeaderText = "netto"
         Me.NettoDataGridViewTextBoxColumn.Name = "NettoDataGridViewTextBoxColumn"
         '
+        'TabbollaQueryBindingSource
+        '
+        Me.TabbollaQueryBindingSource.DataMember = "tab_bolla_Query"
+        Me.TabbollaQueryBindingSource.DataSource = Me.Db_allara_bollaDataSet
+        '
+        'Tab_bolla_QueryTableAdapter
+        '
+        Me.Tab_bolla_QueryTableAdapter.ClearBeforeFill = True
+        '
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(64, 466)
@@ -291,11 +292,21 @@ Partial Class Form1
         Me.Button2.Text = "Opzioni"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(304, 11)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(129, 65)
+        Me.Button3.TabIndex = 5
+        Me.Button3.Text = "FORM SFONDO"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1596, 558)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.DataGridView1)
@@ -303,8 +314,8 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.Text = "Form1"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Db_allara_bollaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TabbollaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Db_allara_bollaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TabbollaQueryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -346,4 +357,5 @@ Partial Class Form1
     Friend WithEvents PesolordoDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents NettoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class

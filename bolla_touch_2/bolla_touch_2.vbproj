@@ -100,6 +100,36 @@
     <Compile Include="FormB.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormC.Designer.vb">
+      <DependentUpon>FormC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormD.Designer.vb">
+      <DependentUpon>FormD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormE.Designer.vb">
+      <DependentUpon>FormE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormF.Designer.vb">
+      <DependentUpon>FormF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSFONDO.Designer.vb">
+      <DependentUpon>FormSFONDO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSFONDO.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -131,6 +161,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormB.resx">
       <DependentUpon>FormB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormC.resx">
+      <DependentUpon>FormC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormD.resx">
+      <DependentUpon>FormD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormE.resx">
+      <DependentUpon>FormE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormF.resx">
+      <DependentUpon>FormF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSFONDO.resx">
+      <DependentUpon>FormSFONDO.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
