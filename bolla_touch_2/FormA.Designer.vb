@@ -24,6 +24,7 @@ Partial Class FormA
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormA))
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.C1FlexGridClassic1 = New C1.Win.C1FlexGrid.Classic.C1FlexGridClassic()
@@ -59,6 +60,9 @@ Partial Class FormA
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.a_tab_autistaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.C1FlexGridClassic1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AtabautistaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Db_allara_bollaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,6 +70,7 @@ Partial Class FormA
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.a_tab_autistaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -134,7 +139,7 @@ Partial Class FormA
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.DimGray
-        Me.Button3.Location = New System.Drawing.Point(90, 294)
+        Me.Button3.Location = New System.Drawing.Point(83, 294)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(109, 102)
         Me.Button3.TabIndex = 7
@@ -375,18 +380,19 @@ Partial Class FormA
         '
         'Button4
         '
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Button4.Location = New System.Drawing.Point(263, 294)
+        Me.Button4.Location = New System.Drawing.Point(217, 294)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(109, 102)
         Me.Button4.TabIndex = 8
-        Me.Button4.Text = "+"
+        Me.Button4.Text = "NEW"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.Control
+        Me.GroupBox2.Controls.Add(Me.ReportViewer1)
         Me.GroupBox2.Controls.Add(Me.C1FlexGridClassic1)
         Me.GroupBox2.ForeColor = System.Drawing.SystemColors.ControlDark
         Me.GroupBox2.Location = New System.Drawing.Point(457, 259)
@@ -444,12 +450,42 @@ Partial Class FormA
         Me.Label8.TabIndex = 13
         Me.Label8.Text = "RICERCA"
         '
+        'Button6
+        '
+        Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.ForeColor = System.Drawing.Color.DimGray
+        Me.Button6.Location = New System.Drawing.Point(342, 294)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(109, 102)
+        Me.Button6.TabIndex = 15
+        Me.Button6.Text = "STAMPA"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'ReportViewer1
+        '
+        ReportDataSource1.Name = "DataSet1"
+        ReportDataSource1.Value = Me.a_tab_autistaBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "bolla_touch_2.Report_TABELLA_A.rdlc"
+        Me.ReportViewer1.Location = New System.Drawing.Point(26, 35)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.Size = New System.Drawing.Size(1001, 422)
+        Me.ReportViewer1.TabIndex = 16
+        Me.ReportViewer1.Visible = False
+        '
+        'a_tab_autistaBindingSource
+        '
+        Me.a_tab_autistaBindingSource.DataMember = "a_tab_autista"
+        Me.a_tab_autistaBindingSource.DataSource = Me.Db_allara_bollaDataSet
+        '
         'FormA
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1588, 865)
+        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label1)
@@ -473,6 +509,7 @@ Partial Class FormA
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
+        CType(Me.a_tab_autistaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -513,4 +550,7 @@ Partial Class FormA
     Friend WithEvents Label1 As Label
     Friend WithEvents Button5 As Button
     Friend WithEvents Label8 As Label
+    Friend WithEvents Button6 As Button
+    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents a_tab_autistaBindingSource As BindingSource
 End Class

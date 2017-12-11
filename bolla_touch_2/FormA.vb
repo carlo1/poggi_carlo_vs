@@ -18,6 +18,8 @@
 
 
 
+
+        Me.ReportViewer1.RefreshReport()
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs)
@@ -81,6 +83,19 @@
     End Sub
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+
+    End Sub
+
+    Private Sub PrintPreviewDialog1_Load(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        ReportViewer1.Visible = True
+
+    End Sub
+
+    Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs)
 
     End Sub
 End Class
