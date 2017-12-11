@@ -50,4 +50,21 @@
     Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
 
     End Sub
+
+
+
+    Private Sub TextBoxCERCA_TextChanged(sender As Object, e As EventArgs) Handles TextBoxCERCA.TextChanged
+        A_tab_autistaTableAdapter.FillByRICERCANOMECOGNOME(Db_allara_bollaDataSet.a_tab_autista, TextBoxCERCA.Text)
+    End Sub
+
+
+    Private Sub Button5_Click_1(sender As Object, e As EventArgs) Handles Button5.Click
+        Me.A_tab_autistaTableAdapter.Fill(Me.Db_allara_bollaDataSet.a_tab_autista)
+        TextBoxCERCA.Text = ""
+
+    End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+
+    End Sub
 End Class
