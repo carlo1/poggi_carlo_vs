@@ -75,16 +75,7 @@ ORDER BY a_ID_autista</CommandText>
               <Mapping SourceColumn="a_cognome" DataSetColumn="a_cognome" />
               <Mapping SourceColumn="a_note" DataSetColumn="a_note" />
             </Mappings>
-            <Sources>
-              <DbSource ConnectionRef="Db_allara_bollaConnectionString1 (MySettings)" DbObjectName="a_tab_autista" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT a_ID_autista, a_cognome, a_nome, a_note, a_spring FROM a_tab_autista ORDER BY a_ID_autista</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </Sources>
+            <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="b_tab_mezzoTableAdapter" GeneratorDataComponentClassName="b_tab_mezzoTableAdapter" Name="b_tab_mezzo" UserDataComponentName="b_tab_mezzoTableAdapter">
             <MainSource>

@@ -27,12 +27,19 @@ Partial Class FormA
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.C1FlexGridClassic1 = New C1.Win.C1FlexGrid.Classic.C1FlexGridClassic()
-        Me.AtabautistaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Db_allara_bollaDataSet = New bolla_touch_2.Db_allara_bollaDataSet()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -44,28 +51,22 @@ Partial Class FormA
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.AtabautistaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Db_allara_bollaDataSet = New bolla_touch_2.Db_allara_bollaDataSet()
         Me.A_tab_autistaTableAdapter = New bolla_touch_2.Db_allara_bollaDataSetTableAdapters.a_tab_autistaTableAdapter()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         CType(Me.C1FlexGridClassic1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AtabautistaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Db_allara_bollaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
+        CType(Me.AtabautistaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Db_allara_bollaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(48, 688)
+        Me.Button1.Location = New System.Drawing.Point(111, 687)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(143, 81)
         Me.Button1.TabIndex = 0
@@ -74,7 +75,7 @@ Partial Class FormA
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(216, 688)
+        Me.Button2.Location = New System.Drawing.Point(292, 687)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(139, 82)
         Me.Button2.TabIndex = 1
@@ -89,7 +90,7 @@ Partial Class FormA
         Me.C1FlexGridClassic1.BackColor = System.Drawing.Color.White
         Me.C1FlexGridClassic1.BackColorAlternate = System.Drawing.Color.White
         Me.C1FlexGridClassic1.BackColorBkg = System.Drawing.Color.Ivory
-        Me.C1FlexGridClassic1.BackColorFixed = System.Drawing.Color.CadetBlue
+        Me.C1FlexGridClassic1.BackColorFixed = System.Drawing.Color.Goldenrod
         Me.C1FlexGridClassic1.BackColorSel = System.Drawing.Color.Wheat
         Me.C1FlexGridClassic1.Cols = 7
         Me.C1FlexGridClassic1.ColumnInfo = resources.GetString("C1FlexGridClassic1.ColumnInfo")
@@ -101,7 +102,7 @@ Partial Class FormA
         Me.C1FlexGridClassic1.ForeColorSel = System.Drawing.Color.DarkSlateBlue
         Me.C1FlexGridClassic1.GridColor = System.Drawing.Color.Wheat
         Me.C1FlexGridClassic1.GridColorFixed = System.Drawing.Color.Black
-        Me.C1FlexGridClassic1.Location = New System.Drawing.Point(484, 308)
+        Me.C1FlexGridClassic1.Location = New System.Drawing.Point(26, 35)
         Me.C1FlexGridClassic1.Name = "C1FlexGridClassic1"
         Me.C1FlexGridClassic1.NodeClosedPicture = Nothing
         Me.C1FlexGridClassic1.NodeOpenPicture = Nothing
@@ -109,49 +110,29 @@ Partial Class FormA
         Me.C1FlexGridClassic1.RowHeightMax = 100
         Me.C1FlexGridClassic1.RowHeightMin = 40
         Me.C1FlexGridClassic1.Rows = 1
-        Me.C1FlexGridClassic1.Size = New System.Drawing.Size(984, 461)
+        Me.C1FlexGridClassic1.Size = New System.Drawing.Size(1001, 461)
         Me.C1FlexGridClassic1.StyleInfo = resources.GetString("C1FlexGridClassic1.StyleInfo")
         Me.C1FlexGridClassic1.TabIndex = 2
         Me.C1FlexGridClassic1.TreeColor = System.Drawing.Color.DarkGray
         '
-        'AtabautistaBindingSource
-        '
-        Me.AtabautistaBindingSource.DataMember = "a_tab_autista"
-        Me.AtabautistaBindingSource.DataSource = Me.Db_allara_bollaDataSet
-        '
-        'Db_allara_bollaDataSet
-        '
-        Me.Db_allara_bollaDataSet.DataSetName = "Db_allara_bollaDataSet"
-        Me.Db_allara_bollaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'Button3
         '
-        Me.Button3.BackgroundImage = Global.bolla_touch_2.My.Resources.Resources.Cattura7
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Button3.Location = New System.Drawing.Point(48, 308)
+        Me.Button3.ForeColor = System.Drawing.Color.DimGray
+        Me.Button3.Location = New System.Drawing.Point(133, 363)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(109, 102)
         Me.Button3.TabIndex = 7
-        Me.Button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button3.Text = "SALVA"
         Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(87, 413)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(34, 13)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Salva"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Swis721 LtEx BT", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label2.Location = New System.Drawing.Point(12, 9)
+        Me.Label2.Location = New System.Drawing.Point(76, 35)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(332, 38)
         Me.Label2.TabIndex = 5
@@ -171,12 +152,101 @@ Partial Class FormA
         Me.GroupBox1.Controls.Add(Me.TextBox2)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.GroupBox1.Location = New System.Drawing.Point(48, 71)
+        Me.GroupBox1.Location = New System.Drawing.Point(83, 89)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(1420, 186)
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Nuovo Record"
+        '
+        'BindingNavigator1
+        '
+        Me.BindingNavigator1.AddNewItem = Nothing
+        Me.BindingNavigator1.BackColor = System.Drawing.SystemColors.Control
+        Me.BindingNavigator1.BindingSource = Me.AtabautistaBindingSource
+        Me.BindingNavigator1.CountItem = Me.BindingNavigatorCountItem
+        Me.BindingNavigator1.DeleteItem = Nothing
+        Me.BindingNavigator1.Dock = System.Windows.Forms.DockStyle.None
+        Me.BindingNavigator1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2})
+        Me.BindingNavigator1.Location = New System.Drawing.Point(18, 148)
+        Me.BindingNavigator1.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
+        Me.BindingNavigator1.MoveLastItem = Me.BindingNavigatorMoveLastItem
+        Me.BindingNavigator1.MoveNextItem = Me.BindingNavigatorMoveNextItem
+        Me.BindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
+        Me.BindingNavigator1.Name = "BindingNavigator1"
+        Me.BindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
+        Me.BindingNavigator1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
+        Me.BindingNavigator1.Size = New System.Drawing.Size(199, 25)
+        Me.BindingNavigator1.TabIndex = 8
+        Me.BindingNavigator1.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(34, 22)
+        Me.BindingNavigatorCountItem.Text = "di {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Numero totale di elementi"
+        '
+        'BindingNavigatorMoveFirstItem
+        '
+        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
+        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveFirstItem.Text = "Sposta in prima posizione"
+        '
+        'BindingNavigatorMovePreviousItem
+        '
+        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
+        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMovePreviousItem.Text = "Sposta indietro"
+        '
+        'BindingNavigatorSeparator
+        '
+        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorPositionItem
+        '
+        Me.BindingNavigatorPositionItem.AccessibleName = "Posizione"
+        Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
+        Me.BindingNavigatorPositionItem.Text = "0"
+        Me.BindingNavigatorPositionItem.ToolTipText = "Posizione corrente"
+        '
+        'BindingNavigatorSeparator1
+        '
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorMoveNextItem
+        '
+        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
+        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveNextItem.Text = "Sposta avanti"
+        '
+        'BindingNavigatorMoveLastItem
+        '
+        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
+        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveLastItem.Text = "Sposta in ultima posizione"
+        '
+        'BindingNavigatorSeparator2
+        '
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'TextBox5
         '
@@ -291,130 +361,63 @@ Partial Class FormA
         'Button4
         '
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(178, 308)
+        Me.Button4.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Button4.Location = New System.Drawing.Point(285, 363)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(109, 102)
         Me.Button4.TabIndex = 8
         Me.Button4.Text = "+"
         Me.Button4.UseVisualStyleBackColor = True
         '
-        'BindingNavigator1
+        'AtabautistaBindingSource
         '
-        Me.BindingNavigator1.AddNewItem = Nothing
-        Me.BindingNavigator1.BackColor = System.Drawing.SystemColors.Control
-        Me.BindingNavigator1.BindingSource = Me.AtabautistaBindingSource
-        Me.BindingNavigator1.CountItem = Me.BindingNavigatorCountItem
-        Me.BindingNavigator1.DeleteItem = Nothing
-        Me.BindingNavigator1.Dock = System.Windows.Forms.DockStyle.None
-        Me.BindingNavigator1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2})
-        Me.BindingNavigator1.Location = New System.Drawing.Point(18, 148)
-        Me.BindingNavigator1.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.BindingNavigator1.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.BindingNavigator1.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.BindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.BindingNavigator1.Name = "BindingNavigator1"
-        Me.BindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
-        Me.BindingNavigator1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.BindingNavigator1.Size = New System.Drawing.Size(199, 25)
-        Me.BindingNavigator1.TabIndex = 8
-        Me.BindingNavigator1.Text = "BindingNavigator1"
+        Me.AtabautistaBindingSource.DataMember = "a_tab_autista"
+        Me.AtabautistaBindingSource.DataSource = Me.Db_allara_bollaDataSet
         '
-        'BindingNavigatorCountItem
+        'Db_allara_bollaDataSet
         '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(34, 22)
-        Me.BindingNavigatorCountItem.Text = "di {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Numero totale di elementi"
-        '
-        'BindingNavigatorMoveFirstItem
-        '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveFirstItem.Text = "Sposta in prima posizione"
-        '
-        'BindingNavigatorMovePreviousItem
-        '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMovePreviousItem.Text = "Sposta indietro"
-        '
-        'BindingNavigatorSeparator
-        '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorPositionItem
-        '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Posizione"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Posizione corrente"
-        '
-        'BindingNavigatorSeparator1
-        '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorMoveNextItem
-        '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveNextItem.Text = "Sposta avanti"
-        '
-        'BindingNavigatorMoveLastItem
-        '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveLastItem.Text = "Sposta in ultima posizione"
-        '
-        'BindingNavigatorSeparator2
-        '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        Me.Db_allara_bollaDataSet.DataSetName = "Db_allara_bollaDataSet"
+        Me.Db_allara_bollaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'A_tab_autistaTableAdapter
         '
         Me.A_tab_autistaTableAdapter.ClearBeforeFill = True
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.C1FlexGridClassic1)
+        Me.GroupBox2.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.GroupBox2.Location = New System.Drawing.Point(457, 288)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(1046, 481)
+        Me.GroupBox2.TabIndex = 9
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Tabella"
+        '
         'FormA
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1059, 750)
+        Me.ClientSize = New System.Drawing.Size(1588, 865)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.C1FlexGridClassic1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Name = "FormA"
         Me.Text = "FormA"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.C1FlexGridClassic1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AtabautistaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Db_allara_bollaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
+        CType(Me.AtabautistaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Db_allara_bollaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -427,7 +430,6 @@ Partial Class FormA
     Friend WithEvents AtabautistaBindingSource As BindingSource
     Friend WithEvents A_tab_autistaTableAdapter As Db_allara_bollaDataSetTableAdapters.a_tab_autistaTableAdapter
     Friend WithEvents Button3 As Button
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Button4 As Button
@@ -451,4 +453,5 @@ Partial Class FormA
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents GroupBox2 As GroupBox
 End Class
