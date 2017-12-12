@@ -24,12 +24,13 @@ Partial Class FormA
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormA))
-        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Me.a_tab_autistaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Db_allara_bollaDataSet = New bolla_touch_2.Db_allara_bollaDataSet()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.C1FlexGridClassic1 = New C1.Win.C1FlexGrid.Classic.C1FlexGridClassic()
         Me.AtabautistaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Db_allara_bollaDataSet = New bolla_touch_2.Db_allara_bollaDataSet()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -55,23 +56,34 @@ Partial Class FormA
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TextBoxCERCA = New System.Windows.Forms.TextBox()
         Me.A_tab_autistaTableAdapter = New bolla_touch_2.Db_allara_bollaDataSetTableAdapters.a_tab_autistaTableAdapter()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.a_tab_autistaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        CType(Me.a_tab_autistaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Db_allara_bollaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1FlexGridClassic1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AtabautistaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Db_allara_bollaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.a_tab_autistaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'a_tab_autistaBindingSource
+        '
+        Me.a_tab_autistaBindingSource.DataMember = "a_tab_autista"
+        Me.a_tab_autistaBindingSource.DataSource = Me.Db_allara_bollaDataSet
+        '
+        'Db_allara_bollaDataSet
+        '
+        Me.Db_allara_bollaDataSet.DataSetName = "Db_allara_bollaDataSet"
+        Me.Db_allara_bollaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Button1
         '
@@ -129,11 +141,6 @@ Partial Class FormA
         Me.AtabautistaBindingSource.DataMember = "a_tab_autista"
         Me.AtabautistaBindingSource.DataSource = Me.Db_allara_bollaDataSet
         '
-        'Db_allara_bollaDataSet
-        '
-        Me.Db_allara_bollaDataSet.DataSetName = "Db_allara_bollaDataSet"
-        Me.Db_allara_bollaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'Button3
         '
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
@@ -160,6 +167,7 @@ Partial Class FormA
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.Control
+        Me.GroupBox1.Controls.Add(Me.Button7)
         Me.GroupBox1.Controls.Add(Me.BindingNavigator1)
         Me.GroupBox1.Controls.Add(Me.TextBox5)
         Me.GroupBox1.Controls.Add(Me.Label7)
@@ -402,6 +410,18 @@ Partial Class FormA
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Tabella"
         '
+        'ReportViewer1
+        '
+        ReportDataSource2.Name = "DataSet1"
+        ReportDataSource2.Value = Me.a_tab_autistaBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "bolla_touch_2.Report_TABELLA_A.rdlc"
+        Me.ReportViewer1.Location = New System.Drawing.Point(26, 35)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.Size = New System.Drawing.Size(1001, 422)
+        Me.ReportViewer1.TabIndex = 16
+        Me.ReportViewer1.Visible = False
+        '
         'TextBoxCERCA
         '
         Me.TextBoxCERCA.Font = New System.Drawing.Font("Swis721 LtEx BT", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -462,22 +482,14 @@ Partial Class FormA
         Me.Button6.Text = "STAMPA"
         Me.Button6.UseVisualStyleBackColor = True
         '
-        'ReportViewer1
+        'Button7
         '
-        ReportDataSource1.Name = "DataSet1"
-        ReportDataSource1.Value = Me.a_tab_autistaBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "bolla_touch_2.Report_TABELLA_A.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(26, 35)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(1001, 422)
-        Me.ReportViewer1.TabIndex = 16
-        Me.ReportViewer1.Visible = False
-        '
-        'a_tab_autistaBindingSource
-        '
-        Me.a_tab_autistaBindingSource.DataMember = "a_tab_autista"
-        Me.a_tab_autistaBindingSource.DataSource = Me.Db_allara_bollaDataSet
+        Me.Button7.Location = New System.Drawing.Point(1141, 40)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(66, 55)
+        Me.Button7.TabIndex = 16
+        Me.Button7.Text = "Button7"
+        Me.Button7.UseVisualStyleBackColor = True
         '
         'FormA
         '
@@ -500,16 +512,16 @@ Partial Class FormA
         Me.Name = "FormA"
         Me.Text = "FormA"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        CType(Me.a_tab_autistaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Db_allara_bollaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1FlexGridClassic1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AtabautistaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Db_allara_bollaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
-        CType(Me.a_tab_autistaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -553,4 +565,6 @@ Partial Class FormA
     Friend WithEvents Button6 As Button
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents a_tab_autistaBindingSource As BindingSource
+    Friend WithEvents Button7 As Button
+    Friend WithEvents PrintDocument1 As Printing.PrintDocument
 End Class

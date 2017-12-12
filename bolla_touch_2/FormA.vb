@@ -1,4 +1,6 @@
-﻿Public Class FormA
+﻿Imports System.Drawing.Printing
+
+Public Class FormA
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Form1.Show()
         Close()
@@ -78,7 +80,8 @@
 
     Private Sub Button5_Click_1(sender As Object, e As EventArgs) Handles Button5.Click
         Me.A_tab_autistaTableAdapter.Fill(Me.Db_allara_bollaDataSet.a_tab_autista)
-        TextBoxCERCA.Text = ""
+
+        '  TextBoxCERCA.Text = ""
 
     End Sub
 
@@ -96,6 +99,13 @@
     End Sub
 
     Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs)
+
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+
+        ReportViewer1.PrintDialog()
+
 
     End Sub
 End Class

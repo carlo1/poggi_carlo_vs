@@ -117,18 +117,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="a_tab_autistaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>171, 56</value>
+  </metadata>
+  <metadata name="Db_allara_bollaDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="Db_allara_bollaDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="C1FlexGridClassic1.ColumnInfo" xml:space="preserve">
     <value>7,1,0,0,0,130,Columns:0{Width:22;}	1{Width:68;Name:"a_ID_autista";Caption:"COD";Style:"DataType:System.Int32;TextAlign:CenterCenter;";}	2{Width:234;Name:"a_nome";Caption:"NOME";Style:"DataType:System.String;TextAlign:LeftCenter;";}	3{Width:245;Name:"a_cognome";Caption:"COGNOME";Style:"DataType:System.String;TextAlign:LeftCenter;";}	4{Width:260;Name:"a_note";Caption:"NOTE";Style:"DataType:System.String;TextAlign:LeftCenter;";}	5{Name:"a_tab_autistatab_bolla";Caption:"a_tab_autistatab_bolla";Visible:False;AllowEditing:False;Style:"DataType:System.ComponentModel.IBindingList;TextAlign:GeneralCenter;";}	6{Name:"a_spring";Caption:"SPRING";Style:"DataType:System.Int32;TextAlign:CenterCenter;";}	</value>
   </data>
   <metadata name="AtabautistaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>193, 17</value>
   </metadata>
-  <metadata name="Db_allara_bollaDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="C1FlexGridClassic1.StyleInfo" xml:space="preserve">
     <value>Normal{Font:Tahoma, 12pt;BackColor:White;ForeColor:DarkGray;Border:Flat,1,Wheat,Both;}	Alternate{BackColor:White;ForeColor:Black;}	Fixed{BackColor:192, 192, 255;ForeColor:Black;Border:None,1,Black,Both;}	Highlight{BackColor:Wheat;ForeColor:DarkSlateBlue;}	Focus{BackColor:Moccasin;}	Editor{}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	NewRow{ForeColor:GrayText;}	EmptyArea{BackColor:Ivory;Border:Flat,1,ControlDarkDark,Both;}	SelectedColumnHeader{}	SelectedRowHeader{}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	FilterEditor{}	FirstCustomStyle{}	</value>
   </data>
+  <metadata name="BindingNavigator1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
   <metadata name="BindingNavigator1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
   </metadata>
@@ -173,10 +182,10 @@
         8l/FYwIYQ4UGBWBgAAC+0b+zuQxOnAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="a_tab_autistaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>171, 56</value>
-  </metadata>
   <metadata name="A_tab_autistaTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>385, 17</value>
+  </metadata>
+  <metadata name="PrintDocument1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>372, 56</value>
   </metadata>
 </root>
