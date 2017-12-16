@@ -24,7 +24,7 @@ Partial Class FormA
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormA))
-        Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.a_tab_autistaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Db_allara_bollaDataSet = New bolla_touch_2.Db_allara_bollaDataSet()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -34,7 +34,6 @@ Partial Class FormA
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button7 = New System.Windows.Forms.Button()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
@@ -55,6 +54,7 @@ Partial Class FormA
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
@@ -75,6 +75,8 @@ Partial Class FormA
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.Button11 = New System.Windows.Forms.Button()
         CType(Me.a_tab_autistaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Db_allara_bollaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1FlexGridClassic1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -196,16 +198,6 @@ Partial Class FormA
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Nuovo Record"
-        '
-        'Button7
-        '
-        Me.Button7.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Button7.Location = New System.Drawing.Point(414, 18)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(79, 55)
-        Me.Button7.TabIndex = 16
-        Me.Button7.Text = "Stampa Report"
-        Me.Button7.UseVisualStyleBackColor = True
         '
         'BindingNavigator1
         '
@@ -406,6 +398,16 @@ Partial Class FormA
         Me.TextBox1.TabIndex = 10
         Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'Button7
+        '
+        Me.Button7.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Button7.Location = New System.Drawing.Point(414, 18)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(79, 55)
+        Me.Button7.TabIndex = 16
+        Me.Button7.Text = "Stampa Report"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
         'Button4
         '
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -432,9 +434,9 @@ Partial Class FormA
         '
         'ReportViewer1
         '
-        ReportDataSource3.Name = "DataSet1"
-        ReportDataSource3.Value = Me.a_tab_autistaBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource3)
+        ReportDataSource2.Name = "DataSet1"
+        ReportDataSource2.Value = Me.a_tab_autistaBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "bolla_touch_2.Report_TABELLA_A.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(26, 35)
         Me.ReportViewer1.Name = "ReportViewer1"
@@ -588,12 +590,32 @@ Partial Class FormA
         Me.Label12.TabIndex = 17
         Me.Label12.Text = "stringa importata dal lettore"
         '
+        'Button10
+        '
+        Me.Button10.Location = New System.Drawing.Point(876, 24)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(93, 48)
+        Me.Button10.TabIndex = 20
+        Me.Button10.Text = "copia"
+        Me.Button10.UseVisualStyleBackColor = True
+        '
+        'Button11
+        '
+        Me.Button11.Location = New System.Drawing.Point(994, 24)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(93, 48)
+        Me.Button11.TabIndex = 20
+        Me.Button11.Text = "incolla"
+        Me.Button11.UseVisualStyleBackColor = True
+        '
         'FormA
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1588, 865)
+        Me.Controls.Add(Me.Button11)
+        Me.Controls.Add(Me.Button10)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.Button9)
@@ -685,4 +707,6 @@ Partial Class FormA
     Friend WithEvents Label13 As Label
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents Label12 As Label
+    Friend WithEvents Button10 As Button
+    Friend WithEvents Button11 As Button
 End Class

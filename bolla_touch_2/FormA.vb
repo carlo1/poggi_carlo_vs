@@ -175,4 +175,26 @@ Public Class FormA
         TextBox6.Select()
 
     End Sub
+
+    Private Sub Button10_Click_1(sender As Object, e As EventArgs) Handles Button10.Click
+        '  Comando copia tutto
+
+
+        Clipboard.Clear() 'cancella appunti
+        Clipboard.SetText(TextBox3.Text)
+        'inserimento testo negli appunti
+
+        ' Comando incolla tutto
+
+
+        '    Testo.Text = "" 'eliminazione testo destinazione
+        '   Testo.Text = Clipboard.GetText 'inserimento testo dagli appunti
+
+    End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        TextBox6.Text = ""
+        TextBox6.Text = Clipboard.GetText
+
+    End Sub
 End Class

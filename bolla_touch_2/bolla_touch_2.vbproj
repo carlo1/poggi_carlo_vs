@@ -202,6 +202,7 @@
     <EmbeddedResource Include="opzioni.resx">
       <DependentUpon>opzioni.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report_qcode_autisti_beta.rdlc" />
     <EmbeddedResource Include="Report_TABELLA_A.rdlc" />
   </ItemGroup>
   <ItemGroup>
