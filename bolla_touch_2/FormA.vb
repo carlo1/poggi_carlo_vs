@@ -111,11 +111,27 @@ Public Class FormA
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
         C1QRCode1.Text = TextBox1.Text + "," + TextBox2.Text + "," + TextBox3.Text
+        Label13.Text = TextBox1.Text + "," + TextBox2.Text + "," + TextBox3.Text
 
 
     End Sub
 
     Private Sub C1QRCode1_Click(sender As Object, e As EventArgs) Handles C1QRCode1.Click
+
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+
+
+        Dim qcode() As String
+        qcode = Split(Label13.Text, ",")
+
+        Label9.Text = qcode(0)
+        Label10.Text = qcode(1)
+        Label11.Text = qcode(2)
+
+
+
 
     End Sub
 End Class

@@ -24,7 +24,7 @@ Partial Class FormA
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormA))
-        Dim ReportDataSource7 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.a_tab_autistaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Db_allara_bollaDataSet = New bolla_touch_2.Db_allara_bollaDataSet()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -68,6 +68,11 @@ Partial Class FormA
         Me.C1QRCode1 = New C1.Win.C1BarCode.C1QRCode()
         Me.AtabautistaBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Button8 = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Label13 = New System.Windows.Forms.Label()
         CType(Me.a_tab_autistaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Db_allara_bollaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1FlexGridClassic1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -426,9 +431,9 @@ Partial Class FormA
         '
         'ReportViewer1
         '
-        ReportDataSource7.Name = "DataSet1"
-        ReportDataSource7.Value = Me.a_tab_autistaBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource7)
+        ReportDataSource3.Name = "DataSet1"
+        ReportDataSource3.Value = Me.a_tab_autistaBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource3)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "bolla_touch_2.Report_TABELLA_A.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(26, 35)
         Me.ReportViewer1.Name = "ReportViewer1"
@@ -520,12 +525,62 @@ Partial Class FormA
         Me.Button8.Text = "Genera Qcode"
         Me.Button8.UseVisualStyleBackColor = True
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(1028, 54)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(39, 13)
+        Me.Label9.TabIndex = 17
+        Me.Label9.Text = "Label9"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(1098, 54)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(45, 13)
+        Me.Label10.TabIndex = 17
+        Me.Label10.Text = "Label10"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(1168, 54)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(45, 13)
+        Me.Label11.TabIndex = 17
+        Me.Label11.Text = "Label11"
+        '
+        'Button9
+        '
+        Me.Button9.Location = New System.Drawing.Point(1365, 16)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(87, 48)
+        Me.Button9.TabIndex = 18
+        Me.Button9.Text = "Divide Stringa"
+        Me.Button9.UseVisualStyleBackColor = True
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(1028, 16)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(45, 13)
+        Me.Label13.TabIndex = 17
+        Me.Label13.Text = "Label13"
+        '
         'FormA
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1588, 865)
+        Me.Controls.Add(Me.Button9)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.C1QRCode1)
@@ -602,4 +657,9 @@ Partial Class FormA
     Friend WithEvents C1QRCode1 As C1.Win.C1BarCode.C1QRCode
     Friend WithEvents AtabautistaBindingSource1 As BindingSource
     Friend WithEvents Button8 As Button
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Button9 As Button
+    Friend WithEvents Label13 As Label
 End Class
