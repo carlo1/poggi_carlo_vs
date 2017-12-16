@@ -110,9 +110,9 @@ Public Class FormA
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-        C1QRCode1.Text = TextBox1.Text + "," + TextBox2.Text + "," + TextBox3.Text
-        Label13.Text = TextBox1.Text + "," + TextBox2.Text + "," + TextBox3.Text
-
+        C1QRCode1.Text = TextBox1.Text + "," + TextBox2.Text + "," + TextBox3.Text + "," + "#"
+        Label13.Text = TextBox1.Text + "," + TextBox2.Text + "," + TextBox3.Text + "," + "#"
+        TextBox6.Select()
 
     End Sub
 
@@ -132,6 +132,47 @@ Public Class FormA
 
 
 
+
+    End Sub
+
+    Private Sub TextBox6_TextChanged(sender As Object, e As EventArgs) Handles TextBox6.TextChanged
+        '  TextBox1.TextChanged()
+        Dim str As String
+        str = TextBox6.Text
+        If str.IndexOf("#") <> -1 Then
+            Dim qcode() As String
+            qcode = Split(Label13.Text, ",")
+
+            Label9.Text = qcode(0)
+            Label10.Text = qcode(1)
+            Label11.Text = qcode(2)
+
+
+            TextBox6.Text = ""
+            TextBox6.Select()
+            '  MsgBox("cambio il valore")
+            '  TextBox1.Text = Replace(TextBox1.Text, "@", "_")
+            '  TextBox1.SelectionStart = TextBox1.TextLength
+        End If
+
+
+
+
+    End Sub
+
+    Private Sub TextBox6_TextAlignChanged(sender As Object, e As EventArgs) Handles TextBox6.TextAlignChanged
+
+    End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs)
+        Dim qcode() As String
+        qcode = Split(TextBox6.Text, ",")
+
+        Label9.Text = qcode(0)
+        Label10.Text = qcode(1)
+        Label11.Text = qcode(2)
+        TextBox6.Text = ""
+        TextBox6.Select()
 
     End Sub
 End Class

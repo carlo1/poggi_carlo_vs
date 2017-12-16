@@ -73,6 +73,8 @@ Partial Class FormA
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         CType(Me.a_tab_autistaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Db_allara_bollaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1FlexGridClassic1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -176,7 +178,6 @@ Partial Class FormA
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.Control
-        Me.GroupBox1.Controls.Add(Me.Button7)
         Me.GroupBox1.Controls.Add(Me.BindingNavigator1)
         Me.GroupBox1.Controls.Add(Me.TextBox5)
         Me.GroupBox1.Controls.Add(Me.Label7)
@@ -199,7 +200,7 @@ Partial Class FormA
         'Button7
         '
         Me.Button7.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Button7.Location = New System.Drawing.Point(1045, 40)
+        Me.Button7.Location = New System.Drawing.Point(414, 18)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(79, 55)
         Me.Button7.TabIndex = 16
@@ -503,10 +504,10 @@ Partial Class FormA
         '
         'C1QRCode1
         '
-        Me.C1QRCode1.Location = New System.Drawing.Point(1347, 78)
+        Me.C1QRCode1.Location = New System.Drawing.Point(1415, 132)
         Me.C1QRCode1.Name = "C1QRCode1"
-        Me.C1QRCode1.Size = New System.Drawing.Size(184, 175)
-        Me.C1QRCode1.SymbolSize = 6
+        Me.C1QRCode1.Size = New System.Drawing.Size(139, 131)
+        Me.C1QRCode1.SymbolSize = 5
         Me.C1QRCode1.TabIndex = 16
         Me.C1QRCode1.Text = "C1QRCode1"
         '
@@ -518,7 +519,7 @@ Partial Class FormA
         'Button8
         '
         Me.Button8.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Button8.Location = New System.Drawing.Point(1241, 129)
+        Me.Button8.Location = New System.Drawing.Point(1268, 132)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(78, 55)
         Me.Button8.TabIndex = 16
@@ -528,35 +529,35 @@ Partial Class FormA
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(1028, 54)
+        Me.Label9.Location = New System.Drawing.Point(1412, 93)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(39, 13)
+        Me.Label9.Size = New System.Drawing.Size(25, 13)
         Me.Label9.TabIndex = 17
-        Me.Label9.Text = "Label9"
+        Me.Label9.Text = "cod"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(1098, 54)
+        Me.Label10.Location = New System.Drawing.Point(1465, 93)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(45, 13)
+        Me.Label10.Size = New System.Drawing.Size(33, 13)
         Me.Label10.TabIndex = 17
-        Me.Label10.Text = "Label10"
+        Me.Label10.Text = "nome"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(1168, 54)
+        Me.Label11.Location = New System.Drawing.Point(1465, 109)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(45, 13)
+        Me.Label11.Size = New System.Drawing.Size(51, 13)
         Me.Label11.TabIndex = 17
-        Me.Label11.Text = "Label11"
+        Me.Label11.Text = "cognome"
         '
         'Button9
         '
-        Me.Button9.Location = New System.Drawing.Point(1365, 16)
+        Me.Button9.Location = New System.Drawing.Point(1268, 201)
         Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(87, 48)
+        Me.Button9.Size = New System.Drawing.Size(78, 48)
         Me.Button9.TabIndex = 18
         Me.Button9.Text = "Divide Stringa"
         Me.Button9.UseVisualStyleBackColor = True
@@ -564,11 +565,28 @@ Partial Class FormA
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(1028, 16)
+        Me.Label13.Location = New System.Drawing.Point(1412, 70)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(45, 13)
+        Me.Label13.Size = New System.Drawing.Size(38, 13)
         Me.Label13.TabIndex = 17
-        Me.Label13.Text = "Label13"
+        Me.Label13.Text = "stringa"
+        '
+        'TextBox6
+        '
+        Me.TextBox6.BackColor = System.Drawing.Color.Yellow
+        Me.TextBox6.Location = New System.Drawing.Point(1259, 102)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(138, 20)
+        Me.TextBox6.TabIndex = 19
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(1265, 70)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(133, 13)
+        Me.Label12.TabIndex = 17
+        Me.Label12.Text = "stringa importata dal lettore"
         '
         'FormA
         '
@@ -576,7 +594,10 @@ Partial Class FormA
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1588, 865)
+        Me.Controls.Add(Me.Button7)
+        Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.Button9)
+        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
@@ -662,4 +683,6 @@ Partial Class FormA
     Friend WithEvents Label11 As Label
     Friend WithEvents Button9 As Button
     Friend WithEvents Label13 As Label
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Label12 As Label
 End Class
