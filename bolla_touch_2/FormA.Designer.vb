@@ -24,7 +24,7 @@ Partial Class FormA
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormA))
-        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource7 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.a_tab_autistaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Db_allara_bollaDataSet = New bolla_touch_2.Db_allara_bollaDataSet()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -34,6 +34,7 @@ Partial Class FormA
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
@@ -63,8 +64,10 @@ Partial Class FormA
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.C1QRCode1 = New C1.Win.C1BarCode.C1QRCode()
+        Me.AtabautistaBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Button8 = New System.Windows.Forms.Button()
         CType(Me.a_tab_autistaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Db_allara_bollaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1FlexGridClassic1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,6 +76,7 @@ Partial Class FormA
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.AtabautistaBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'a_tab_autistaBindingSource
@@ -182,10 +186,20 @@ Partial Class FormA
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.AppWorkspace
         Me.GroupBox1.Location = New System.Drawing.Point(83, 92)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1420, 152)
+        Me.GroupBox1.Size = New System.Drawing.Size(1137, 152)
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Nuovo Record"
+        '
+        'Button7
+        '
+        Me.Button7.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Button7.Location = New System.Drawing.Point(1045, 40)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(79, 55)
+        Me.Button7.TabIndex = 16
+        Me.Button7.Text = "Stampa Report"
+        Me.Button7.UseVisualStyleBackColor = True
         '
         'BindingNavigator1
         '
@@ -412,9 +426,9 @@ Partial Class FormA
         '
         'ReportViewer1
         '
-        ReportDataSource2.Name = "DataSet1"
-        ReportDataSource2.Value = Me.a_tab_autistaBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
+        ReportDataSource7.Name = "DataSet1"
+        ReportDataSource7.Value = Me.a_tab_autistaBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource7)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "bolla_touch_2.Report_TABELLA_A.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(26, 35)
         Me.ReportViewer1.Name = "ReportViewer1"
@@ -482,14 +496,29 @@ Partial Class FormA
         Me.Button6.Text = "STAMPA"
         Me.Button6.UseVisualStyleBackColor = True
         '
-        'Button7
+        'C1QRCode1
         '
-        Me.Button7.Location = New System.Drawing.Point(1141, 40)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(66, 55)
-        Me.Button7.TabIndex = 16
-        Me.Button7.Text = "Button7"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.C1QRCode1.Location = New System.Drawing.Point(1347, 78)
+        Me.C1QRCode1.Name = "C1QRCode1"
+        Me.C1QRCode1.Size = New System.Drawing.Size(184, 175)
+        Me.C1QRCode1.SymbolSize = 6
+        Me.C1QRCode1.TabIndex = 16
+        Me.C1QRCode1.Text = "C1QRCode1"
+        '
+        'AtabautistaBindingSource1
+        '
+        Me.AtabautistaBindingSource1.DataMember = "a_tab_autista"
+        Me.AtabautistaBindingSource1.DataSource = Me.Db_allara_bollaDataSet
+        '
+        'Button8
+        '
+        Me.Button8.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Button8.Location = New System.Drawing.Point(1241, 129)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(78, 55)
+        Me.Button8.TabIndex = 16
+        Me.Button8.Text = "Genera Qcode"
+        Me.Button8.UseVisualStyleBackColor = True
         '
         'FormA
         '
@@ -497,7 +526,9 @@ Partial Class FormA
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1588, 865)
+        Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.C1QRCode1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label1)
@@ -522,6 +553,7 @@ Partial Class FormA
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
+        CType(Me.AtabautistaBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -567,4 +599,7 @@ Partial Class FormA
     Friend WithEvents a_tab_autistaBindingSource As BindingSource
     Friend WithEvents Button7 As Button
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
+    Friend WithEvents C1QRCode1 As C1.Win.C1BarCode.C1QRCode
+    Friend WithEvents AtabautistaBindingSource1 As BindingSource
+    Friend WithEvents Button8 As Button
 End Class

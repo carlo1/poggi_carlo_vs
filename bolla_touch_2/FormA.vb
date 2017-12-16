@@ -108,4 +108,14 @@ Public Class FormA
 
 
     End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        C1QRCode1.Text = TextBox1.Text + "," + TextBox2.Text + "," + TextBox3.Text
+
+
+    End Sub
+
+    Private Sub C1QRCode1_Click(sender As Object, e As EventArgs) Handles C1QRCode1.Click
+
+    End Sub
 End Class
